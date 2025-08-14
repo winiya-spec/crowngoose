@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Us</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/top.css">
+  <link rel="stylesheet" href="css/bottom.css">
+  <link rel="stylesheet" href="css/layout4.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="menu_wrap">
+      <div class="menu_wrap_inner">
+        <button type="button" class="menu_close">
+          <img src="./img/icons/close.png" alt="close" width="45">
+        </button>
+        <nav id="gnb">
+          <!-- <img src="./img/icons/navi_bg.png" alt="헤드배경" class="navi_bg"> -->
+          <div id="navi_btn">
+            <a href="login.html">LOGIN</a>
+            <a href="join.html">JOIN US</a>
+          </div>
+          <div id="search">
+            <form action="/search" method="get" class="search-form">
+              <input type="text" name="search" class="bar">
+              <span class="search-icon"></span>
+            </form>
+          </div>
+          <ul>
+            <li class="has-submenu">
+              <a href="brand.html">
+                <span class="menu-text">CROWN STORY</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="brand.html" class="selected connect">브랜드헤리티지</a></li>
+                <li><a href="#">글로벌 크라운구스</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">
+                <span class="menu-text">ART COLLABORATION</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">크리에이터 협업스토리</a></li>
+                <li><a href="#">크라운구스 아뜰리에</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="product.html">
+                <span class="menu-text">PRODUCT</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="product.html" class="connect">크라운컬렉션</a></li>
+                <li><a href="#">마제스티컬렉션 </a></li>
+                <li><a href="#">커버컬렉션</a></li>
+                <li><a href="#">구스컬렉션</a></li>
+                <li><a href="#">호텔 컬렉션</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">
+                <span class="menu-text">BESPOKE</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">비스포크 침구상담</a></li>
+                <li><a href="#">파트너십</a></li>
+                <li><a href="#">컨설팅 예약</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">
+                <span class="menu-text">MEDIA</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">뉴스&보도자료</a></li>
+                <li><a href="#">인플루언서리뷰</a></li>
+                <li><a href="#">전시/이벤트 스토리</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">
+                <span class="menu-text">COMMUNITY</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">자주묻는 질문</a></li>
+                <li><a href="#">고객후기</a></li>
+                <li><a href="#">온라인 문의</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div id="navi_info">
+            <p>CS CENTER</p>
+            <p>02-575-6525</p>
+          </div>
+          <div id="kakao">
+            <a href="#"><img src="./img/icons/kakao1.png" alt="feedback" width="30" class="talk">카카오톡 상담</a>
+          </div>
+          <div id="sns1">
+            <a href="#"><img src="./img/icons/sns/facebook.png" alt="facebook" class="facebook-icon"></a>
+            <a href="#"><img src="./img/icons/sns/instagram.png" alt="instagram"></a>
+            <a href="#"><img src="./img/icons/sns/kakaostory.png" alt="kakaostory"></a>
+            <a href="#"><img src="./img/icons/sns/youtube.png" alt="youtube" class="youtube-icon"></a>
+            <a href="#"><img src="./img/icons/sns/blog.png" alt="blog" class="blog-icon"></a>
+          </div>
+          <div id="navi_logo">
+            <a href="index.html"><img src="./img/footer/footerlogo.png" alt="logo" class="m_logo"></a>
+          </div>
+        </nav><!-- gnb -->
+      </div><!-- menu_wrap_inner-->
+    </div><!-- menu_wrap -->
+    </header>
+
+    <!-- 페이지 본문 -->
+    <div id="wrap1">
+      <div id="log_top">
+        <h1>JOIN US</h1>
+        <span class="line"></span>
+        <p class="txt_1">Exclusive Membership</p>
+        <p class="txt_2">Create your account and enjoy our services.</p>
+      </div>
+
+      <div id="inner_wrap">
+        <form id="signupForm">
+          <input type="text" id="name" placeholder="아이디" required><br>
+          <input type="password" id="password" placeholder="비밀번호" required><br>
+          <input type="password" id="passwordConfirm" placeholder="비밀번호 확인" required><br>
+          <button type="submit" class="btn-bg">회원가입</button>
+        </form>
+        <div class="btn-group">
+          <div id="user">
+            <button type="button" class="btn-secondary" onclick="location.href='login.html'">로그인 페이지로</button>
+          </div>
+        </div>
+      </div>
+
+     <!-- footer -->
+      <footer data-aos="fade-up" data-aos-duration="2500">
+        <div id="foot-bg">
+          <img src="./img/footer/footerbg.png" alt="bg">
+        </div>
+        <div id="foot_top">
+          <div class="f_txt">
+            <p>WE'RE <br>OFFERING A <br>NEW SERVICE</p>
+          </div>
+          <div id="sns">
+            <a href="#"><img src="./img/icons/sns/facebook.png" alt="facebook" class="facebook-icon"></a>
+            <a href="#"><img src="./img/icons/sns/instagram.png" alt="instagram"></a>
+            <a href="#"><img src="./img/icons/sns/kakaostory.png" alt="kakaostory"></a>
+            <a href="#"><img src="./img/icons/sns/youtube.png" alt="youtube" class="youtube-icon"></a>
+            <a href="#"><img src="./img/icons/sns/blog.png" alt="blog" class="blog-icon"></a>
+          </div>
+        </div>
+        <div class="footer-content">
+          <ul>
+            <li>태그 | 가이드 | 이용약관</li>
+            <li>개인정보취급방침 | 사업자 정보 확인</li>
+          </ul>
+          <div class="footer-info">
+            <p>(주)지에이치씨지<br>통신판매번호: 2015-서울 강남-02167호</p>
+            <p>서울 강남구 도산 대로 78길 40(청담동 13-26)<br>
+              E-MAIL crowngoose@crowngooseemail.com</p>
+            <p>운영시간 AM9:00~ PM6:00 <br>
+              고객지원 02-575-6525</p>
+            <p>청담 부티크 매장 :<br>
+              서울시 강남구 도산 대로 78길 40(청담동 13-26)<br>
+              CROWN GOOSE HOUSE DOSAN, 02- 6101-7755</p>
+            <p>CEO : 이재성 l CPO : 이재성</p>
+          </div>
+          <div class="copyright">&copy; Copyright GHCG <br>All rights reserved.</div>
+          <a href="index.html"><img src="./img/footer/footerlogo.png" alt="logo" width="180" class="f_logo"></a>
+          <p class="letter">CROWN GOOSE</p>
+        </div>
+      </footer>
+
+      <!-- 탑 및 사이드 버튼-->
+      <div id="sidebtn">
+        <a href="#" class="sidebtn_1"><img src="./img/icons/side/email.png" alt="email" width="40"></a>
+        <a href="#" class="sidebtn_2"><img src="./img/icons/side/recommend.png" alt="recommaend" width="40"></a>
+        <a href="#" class="sidebtn_3"><img src="./img/icons/side/inquire.png" alt="inquire" width="40"></a>
+        <a href="#" class="top_btn"><img src="./img/icons/top.png" alt="위로가기" width="40"></a>
+      </div>
+    </div>
+  </div><!-- wrap -->
+
+
+  <!-- 회원가입 스크립트 -->
+  <script>
+  $(function(){
+    $("#signupForm").submit(function(event){
+      event.preventDefault();
+
+      const name = $("#name").val().trim();
+      const password = $("#password").val().trim();
+      const passwordConfirm = $("#passwordConfirm").val().trim();
+
+      if (!name || !password) {
+        alert("아이디와 비밀번호를 입력하세요.");
+        return;
+      }
+
+      if (password !== passwordConfirm) {
+        alert("비밀번호가 일치하지 않습니다.");
+        return;
+      }
+
+      localStorage.setItem("name", name);
+      localStorage.setItem("password", password);
+
+      alert("회원가입 완료! 로그인 페이지로 이동합니다.");
+      window.location.href = "login.html";
+    });
+  });
+  </script>
+</body>
+</html>

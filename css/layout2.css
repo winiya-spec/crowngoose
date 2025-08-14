@@ -1,0 +1,714 @@
+@charset "utf-8";
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  color: #37250f;
+  line-height: 1.5em;
+  font-size: 14px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+.swiper-wrapper,
+.swiper-slide,
+#bestCollectionSection {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+
+
+/* #main_wrap*/
+
+#main_wrap {
+  width: 100%;
+  min-width: 320px;
+}
+
+.section-title {
+  text-align: right;
+  font-size: 50px;
+  color: #917753;
+  font-family: 'ArsenicaTrial-Regular';
+  margin-top: 80px;
+  line-height: 1.2em;
+  margin-bottom: 40px;
+  padding-right: 30px;
+}
+
+.brand-desc {
+  font-size: 13px;
+  color: #917753;
+  margin-bottom: 40px;
+  text-align: left;
+  padding-left: 30px;
+  font-family: 'AlegreyaSans-Regular';
+}
+
+#mainslide {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+}
+
+#mainslide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+#mainslide img.selected1 {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+.site-link {
+  border: 1px solid #ab8757;
+  display: block;
+  width: 250px;
+  height: 28px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 25px;
+  margin-bottom: 80px;
+  font-family: 'NotoSerifDisplay-Regular';
+  margin-top: 20px;
+}
+
+
+/* #container */
+#container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.time_txt {
+  font-family: 'Pretendard-Regular';
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 30px;
+
+}
+
+.time_txt1 {
+  font-family: 'NotoSerifDisplay-Italic';
+  font-size: 20px;
+  margin-top: -15px;
+  text-align: center;
+}
+
+#intro_bg {
+  width: 100%;
+  width: 100%;
+  margin-top: 80px;
+  height: 400px;
+}
+
+.br_bg {
+  height: 400px;
+}
+
+#br_img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  transition: transform 0.6s ease-in-out, filter 0.6s ease-in-out;
+  will-change: transform, filter;
+}
+
+#br_img img:hover {
+  filter: brightness(1.1);
+  transform: scale(1.01);
+}
+
+
+
+/* 전체 컨테이너 */
+
+#heritage_philosophy {
+  position: relative;
+  width: 100%;
+  transition: background-color 0.8s ease;
+  padding: 60px 20px;
+  min-height: 1500px;
+  background-image: url('../img/brandstory/bg-4.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* 타이틀 */
+.heri_txt {
+  font-family: 'NotoSerifDisplay-Italic', serif;
+  font-size: 28px;
+  text-align: center;
+  color: #5a4a2a;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+
+.heri_txt1 {
+  font-size: 18px;
+  text-align: center;
+  color: #7a6a4d;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-left: -10px;
+}
+
+/*story 영역 (라인, 점, 텍스트)*/
+#story {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2em;
+}
+
+/* 세로 라인 */
+#br_line {
+  position: absolute;
+  top: 12px;
+  left: 50px;
+  height: 1500px;
+  border-left: 1px solid #b48e63;
+  z-index: 0;
+}
+
+/* 점(dot) 스타일 */
+.dot {
+  position: absolute;
+  left: 46px;
+  width: 11px;
+  height: 11px;
+  background-color: #c29460;
+  border-radius: 50%;
+  z-index: 2;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  opacity: 0.6;
+}
+
+/* dot 위치 지정 */
+.dot:nth-of-type(1) {
+  top: 5px;
+}
+
+.dot:nth-of-type(2) {
+  top: 207px;
+}
+
+.dot:nth-of-type(3) {
+  top: 425px;
+}
+
+.dot:nth-of-type(4) {
+  top: 625px;
+}
+
+
+.dot.active {
+  transform: scale(1.8);
+  background-color: #a3733b;
+  opacity: 1;
+}
+
+#br_line.grow::before {
+  animation: growLine 2s ease-out forwards;
+}
+
+@keyframes growLine {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
+
+/* 텍스트 영역 */
+#br_txt {
+  width:200px;
+  padding-left: 70px;
+  padding-right: 50px;
+  z-index: 3;
+}
+
+/*  텍스트 문단들 */
+.br_wrap,
+.br_wrap1,
+.br_wrap2,
+.br_wrap3 {
+  width: 330px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+  margin-bottom: 40px;
+}
+
+/* 활성화된 문단 */
+.br_wrap.active,
+.br_wrap1.active,
+.br_wrap2.active,
+.br_wrap3.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+#br_line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 0;
+  background: #c29460;
+  transition: height 0.5s ease-out;
+}
+
+#br_line.active::before {
+  height: 100%;
+}
+
+
+/* 문단 내 텍스트 스타일 */
+#br_txt p {
+margin-right:60px;
+  line-height: 1.8;
+  color: #3a3a3a;
+}
+
+/* 인용구 */
+.quote {
+  font-style: italic;
+  color: #7a6a4d;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+/* philosophy */
+
+#philosophy {
+  width: 100%;
+  margin-top: -420px;
+}
+
+.phil_bg {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: -90px;
+}
+
+.phil_bg img {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  transform: scale(1);
+  will-change: transform;
+}
+
+.phil_bg img.zoom {
+  animation: zoomIn 8s ease-in-out forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+
+
+.heri_txt_3 {
+  font-family: 'NotoSerifDisplay-Italic', serif;
+  font-size: 32px;
+  text-align: center;
+  color: #5a4a2a;
+  line-height: 1.3em;
+  margin-bottom: 40px;
+  margin-top: 80px;
+}
+
+.heri_txt_4 {
+  font-size: 17px;
+  text-align: center;
+  color: #7a6a4d;
+  line-height: 1.5em;
+  margin-bottom: 40px;
+}
+
+
+#story_main img {
+  width: 100%;
+  position: relative;
+}
+
+#sub_img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+}
+
+#sub_img img {
+  flex: 1;
+  width: 48%;
+  height: 140px;
+  margin: 10px auto;
+  border-radius: 0 50px 0 0;
+  gap: 2px;
+}
+
+
+.photo1 {
+  position: absolute;
+  bottom: 40px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.photo2 {
+  position: absolute;
+  bottom: 40px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+
+.s_sub {
+  font-family: 'NotoSerifDisplay-Italic';
+  font-size: 25px;
+  margin-bottom: 25px;
+  margin-left: 30px;
+}
+
+.ph_sub,
+.ph_sub1 {
+  padding-left: 30px;
+}
+
+.ph_sub1 {
+  margin-bottom: 40px;
+}
+
+#heritage_philosophy h2 {
+  text-align: left;
+}
+
+#br_txt p {
+  text-align: left;
+  margin-bottom: 30px;
+  padding-left: 30px;
+}
+
+#heritage_philosophy h3 {
+  margin-bottom: 50px;
+}
+
+.num {
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 100px;
+  padding-bottom: 50px;
+}
+
+#ph_1 {
+  width: 100%;
+}
+
+.num {
+  font-family: 'NotoSerifDisplay-Regular', serif;
+  font-size: 60px;
+  color: #724b36;
+}
+
+
+#ph_1 h2 {
+  font-family: 'NotoSerifDisplay-Italic';
+  font-size: 23px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.ph_sub {
+  font-family: 'Pretendard-Regular';
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+.ph_img1 img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center 100%;
+  display: block;
+}
+
+.ph_img2 img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center 70%;
+  display: block;
+}
+
+.ph_img3 img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center 70%;
+  display: block;
+  margin-bottom: 80px;
+}
+
+
+/* video-wrap  */
+.video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 비율 (가로 세로 비율 유지) */
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  border: 0;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/*hotel  */
+#hotel_img {
+  width: 100%;
+  position: relative;
+  padding-top: 60px;
+}
+
+#hotel_img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin-top: 50px;
+}
+
+.hotel-caption {
+  font-size: 12px;
+  color: #c6ac83;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  text-align: center
+}
+
+.glo_txt,
+.glo_sub,
+.glo_sub1 {
+  text-align: center;
+}
+
+.glo_txt {
+  line-height: 1.3em;
+  font-size: 32px;
+  font-family: 'NotoSerifDisplay-Regular';
+  margin-bottom: 30px;
+}
+
+.glo_sub {
+  font-size: 13px;
+  font-family: 'NotoSerifDisplay-Regular';
+  margin-bottom: 20px;
+}
+
+.glo_sub1 {
+  font-size: 13PX;
+}
+
+/* 동영상 */
+#sub_menu {
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+#sub_menu p {
+  border: 1px solid #6d5131;
+  width: 320px;
+  height: 65px;
+  border-radius: 50px;
+  color: #6d5131;
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 0.8;
+  font-size: 14px;
+}
+
+
+
+
+
+
+/* 탑버튼/사이드버튼 */
+.top_btn {
+  position: fixed;
+  right: 5px;
+  bottom: 50px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
+  filter: brightness(1);
+}
+
+.top_btn:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+.sidebtn_1,
+.sidebtn_2,
+.sidebtn_3 {
+  position: fixed;
+  right: 5px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
+  filter: brightness(1);
+  cursor: pointer;
+}
+
+
+.foot_t {
+  flex: 1;
+  min-width: 200px;
+  margin-left: -20px;
+}
+
+
+#sns {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 100px;
+  right: 110px;
+  margin-right: -20px;
+}
+
+
+
+
+.sidebtn_1:hover,
+.sidebtn_2:hover,
+.sidebtn_3:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+#sidebtn a img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 1.5px;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transform: scale(0.9);
+}
+
+#sidebtn a:hover img {
+  transform: scale(1);
+  filter: brightness(1.1);
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
+}
+
+
+.sidebtn_1 {
+  bottom: 200px;
+  transition: all 0.3s;
+}
+
+.sidebtn_2 {
+  bottom: 240px;
+  transition: all 0.3s;
+}
+
+.sidebtn_3 {
+  bottom: 280px;
+  transition: all 0.3s;
+}
+
+.top_btn,
+.sidebtn_1,
+.sidebtn_2,
+.sidebtn_3 {
+  z-index: 1000;
+}

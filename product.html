@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crown goose Product</title>
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/layout3.css">
+  <link rel="stylesheet" href="css/top.css">
+  <link rel="stylesheet" href="css/bottom.css">
+  
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="js/menu.js"></script>
+
+  <!-- AOS 스타일 -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <!-- AOS 스크립트 -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="top">
+      <img src="./img/header/hdbg.png" alt="헤드배경" class="hd_bg">
+      <div class="top-inner">
+        <h1 class="hd_logo">
+          <a href="index.html">
+            <img src="./img/header/hd-logo.png" alt="crowngoose">
+          </a>
+        </h1>
+        <ul class="top_icon">
+          <li><a href="#" class="menu_icon"><img src="./img/icons/header_icon/shopping.png" alt="쇼핑" width="28"></a>
+          </li>
+          <li><a href="login.html" class="menu_icon"><img src="./img/icons/header_icon/login.png" alt="로그인"
+                width="31"></a></li>
+          <li><a href="#" class="menu_icon"><img src="./img/icons/header_icon/search.png" alt="검색" width="33"></a></li>
+          <li><a href="#" class="menu_con"><img src="./img/icons/header_icon/menu.png" alt="메뉴" width="25"></a></li>
+        </ul>
+      </div><!-- top-inner -->
+    </header>
+    <div id="menu_wrap">
+      <div class="menu_wrap_inner">
+        <button type="button" class="menu_close">
+          <img src="./img/icons/close.png" alt="close" width="45">
+        </button>
+        <nav id="gnb">
+          <!-- <img src="./img/icons/navi_bg.png" alt="헤드배경" class="navi_bg"> -->
+          <div id="navi_btn">
+            <a href="login.html">LOGIN</a>
+            <a href="join.html">JOIN US</a>
+          </div>
+          <div id="search">
+            <form action="/search" method="get" class="search-form">
+              <input type="text" name="search" class="bar">
+              <span class="search-icon"></span>
+            </form>
+          </div>
+          <ul>
+            <li class="has-submenu">
+              <a href="brand.html">
+                <span class="menu-text">CROWN STORY</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="brand.html" class="selected connect">브랜드헤리티지</a></li>
+                <li><a href="#">글로벌 크라운구스</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">
+                <span class="menu-text">ART COLLABORATION</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">크리에이터 협업스토리</a></li>
+                <li><a href="#">크라운구스 아뜰리에</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="product.html">
+                <span class="menu-text">PRODUCT</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="product.html" class="connect">크라운컬렉션</a></li>
+                <li><a href="#">마제스티컬렉션 </a></li>
+                <li><a href="#">커버컬렉션</a></li>
+                <li><a href="#">구스컬렉션</a></li>
+                <li><a href="#">호텔 컬렉션</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">
+                <span class="menu-text">BESPOKE</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">비스포크 침구상담</a></li>
+                <li><a href="#">파트너십</a></li>
+                <li><a href="#">컨설팅 예약</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">
+                <span class="menu-text">MEDIA</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">뉴스&보도자료</a></li>
+                <li><a href="#">인플루언서리뷰</a></li>
+                <li><a href="#">전시/이벤트 스토리</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">
+                <span class="menu-text">COMMUNITY</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">자주묻는 질문</a></li>
+                <li><a href="#">고객후기</a></li>
+                <li><a href="#">온라인 문의</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div id="navi_info">
+            <p>CS CENTER</p>
+            <p>02-575-6525</p>
+          </div>
+          <div id="kakao">
+            <a href="#"><img src="./img/icons/kakao1.png" alt="feedback" width="30" class="talk">카카오톡 상담</a>
+          </div>
+          <div id="sns1">
+            <a href="#"><img src="./img/icons/sns/facebook.png" alt="facebook" class="facebook-icon"></a>
+            <a href="#"><img src="./img/icons/sns/instagram.png" alt="instagram"></a>
+            <a href="#"><img src="./img/icons/sns/kakaostory.png" alt="kakaostory"></a>
+            <a href="#"><img src="./img/icons/sns/youtube.png" alt="youtube" class="youtube-icon"></a>
+            <a href="#"><img src="./img/icons/sns/blog.png" alt="blog" class="blog-icon"></a>
+          </div>
+          <div id="navi_logo">
+            <a href="index.html"><img src="./img/footer/footerlogo.png" alt="logo" class="m_logo"></a>
+          </div>
+        </nav><!-- gnb -->
+      </div><!-- menu_wrap_inner-->
+    </div><!-- menu_wrap -->
+
+
+    <!-- 메인 -->
+    <div id="main_wrap">
+      <div id="main_txt">
+        <p class="section-title" data-aos="fade-light" data-aos-duration="2000">PRODUCT</p>
+        <p class="brand-desc">
+          Crown Goose blends royal heritage with modern sophistication.<br>
+          Each piece is crafted for timeless luxury.
+          It offers comfort and quiet<br> prestige in every detail.
+        </p>
+      </div><!--main_txt  -->
+      <div id="mainslide">
+        <ul class="mainset">
+          <li class="active"><img src="./img/product/productmain/productmain2.png" alt="슬라이드1"></li>
+          <li><img src="./img/product/productmain/productmain3.png" alt="슬라이드2"></li>
+          <li><img src="./img/product/productmain/productmain1.png" alt="슬라이드3"></li>
+        </ul>
+        <div class="indicators5" id="btn_all">
+          <span class="dot on"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <a href="#" class="prev"><i class="fas fa-angle-left"></i></a>
+        <a href="#" class="next"><i class="fas fa-angle-right"></i></a>
+      </div>
+      <div id="box">
+        <div id="sub_pro_wrap">
+          <div class="sub1">
+            <div class="collection1">
+              <a href="#majesty">Majesty<br>Collection</a>
+            </div><!-- collection1 -->
+            <div class="collection2">
+              <a href="#cover">Cover<br>Collection</a>
+            </div><!-- collection2 -->
+          </div><!-- sub1 -->
+          <div class="sub1">
+            <div class="collection3">
+              <a href="#cover">Goose<br>Collection</a>
+            </div><!-- collection3 -->
+            <div class="collection4">
+              <a href="#hotel">Hotel<br>Collection</a>
+            </div><!-- collection4 -->
+          </div><!-- sub1-->
+        </div><!-- sub_pro_wrap -->
+      </div><!-- box -->
+      
+
+      <!--"Masterpieces -->
+      <div id="master">
+        <p class="mas_txt" data-aos="fade-in" data-aos-duration="2000">"Masterpieces of Crown Goose Craftsmanship"</p>
+        <p class="mas_txt1">크라운구스 제품은 장인들의 변함없는 헌신과 <br>정제된 기술력을 담고 있습니다.</p>
+      </div>
+      <div id="main_img" data-aos="fade-down" data-aos-duration="2500">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="photo" src="./img/product/productmain/productmainslide-1.png" alt="슬라이드1">
+            </div>
+            <div class="swiper-slide">
+              <img class="photo" src="./img/product/productmain/productmainslide-2.png" alt="슬라이드2">
+            </div>
+            <div class="swiper-slide">
+              <img class="photo" src="./img/product/productmain/productmainslide-3.png" alt="슬라이드3">
+            </div>
+          </div>
+          <!-- Navigation buttons -->
+          <a href="#" class="prev" aria-label="이전 슬라이드">
+            <i class="fas fa-chevron-left"></i>
+          </a>
+          <a href="#" class="next" aria-label="다음 슬라이드">
+            <i class="fas fa-chevron-right"></i>
+          </a>
+          <!-- Centered text -->
+          <p class="mm_txt">
+            Crown Goose bedding embraces your lifestyle <br>
+            with timeless luxury and tailored beauty.
+          </p>
+        </div>
+      </div>
+      <hr>
+      <div id="container">
+        <div id="life">
+          <div id="life_txt">
+            <p class="life_txt" data-aos="fade-in" data-aos-duration="2000">Crown Goose<br>Lifestyle</p>
+            <p>“ 숙면을 넘어 품격 있는 <br>
+              삶을 완성하는 크라운구스 <br>
+              시그니처 아이템을 <br>
+              소개합니다. ”</p>
+            <p class="life_txt1">"Signature pieces from <br>
+              Crown Goose that <br>
+              transcend restful sleep, <br>
+              bringing elegance to <br>
+              every aspect of your life."</p>
+          </div><!-- life_txt -->
+          <img src="./img/product/lifestyle/lifemain.png" alt="라이프스타일" data-aos="fade-left" data-aos-duration="2000">
+        </div><!-- life -->
+      </div><!-- container -->
+      <hr>
+
+      <!-- majesty -->
+      <div id="majesty">
+        <p class="product_txt" data-aos="fade-in" data-aos-duration="2000">Majesty Collection</p>
+        <p class="product_txt1">세계 최고급 호텔의 품격을 담은 침구 컬렉션</p>
+        <p class="product_txt2">A bedding collection embodying the elegance of the <br>
+          world’s finest hotels.
+        </p>
+        <div id="maj_sub">
+          <div id="sub_1" data-aos="fade-up" data-aos-duration="2500">
+            <img src="./img/product/majesty/majesty-1.png" alt="마제스티컬렉션" class="sub1_img">
+            <a href="#" class="view-more1">View More</a>
+            <p class="product_sub_txt">Celestia Nocturne</p>
+            <p>고요한 밤과 별빛의 세레나데. 우아한 밤을 위한 침구의 정수</p>
+            <div class="price">
+              <p>Size</p>
+              <p><span>SS Q K LK</span></p>
+            </div><!--price  -->
+            <div class="line"></div>
+            <div class="price2">
+              <p>Price</p>
+              <p class="price-origin"><del>1,050,000원</del></p>
+              <p class="price-sale">850,000원</p>
+            </div><!-- price2 -->
+            <div class="line"></div>
+          </div><!-- sub_1-->
+          <div id="sub_2" data-aos="fade-down" data-aos-duration="2500">
+            <img src="./img/product/majesty/majesty-2.png" class="main-product-img" alt="마제스티컬렉션">
+            <a href="#" class="view-more1-1">View More</a>
+            <!-- 프로모션가 이미지 (태그) -->
+            <div class="pri_tag"><img src="./img/product/majesty/discount.png" alt="프로모션가" class="promo-img"></div>
+            <p class="product_sub_txt">Serenity Luxe</p>
+            <p>고요한 럭셔리와 현대적 우아함이 돋보이는 베딩</p>
+            <div class="price">
+              <p>Size</p>
+              <p><span>SS Q K LK</span></p>
+            </div><!--price  -->
+            <div class="line"></div>
+            <div class="price2">
+              <p>Price</p>
+              <p class="price-origin"><del>1,250,000원</del></p>
+              <p class="price-sale">950,000원</p>
+            </div><!--price2  -->
+            <div class="line"></div>
+          </div><!-- product_sub_txt -->
+        </div><!-- sub_2 -->
+      </div><!-- majesty -->
+
+
+      <!-- hotel -->
+      <div id="hotel" data-aos="fade-up" data-aos-duration="2500">
+        <p class="product_txt">Hotel Collection</p>
+        <p class="product_txt1">세계 최고급 호텔의 품격을 담은 침구 컬렉션</p>
+        <p class="product_txt2">A bedding collection embodying the elegance of <br>
+          the world’s finest hotels.</p>
+        <div class="first_sub">
+          <img src="./img/product/hotelcollection/hotelcollection-1.png" alt="호텔컬렉션">
+          <img src="./img/product/hotelcollection/hotelcollection-2.png" alt="호텔컬렉션">
+        </div><!--first_sub  -->
+        <div class="second_sub">
+          <div id="sec_txt">
+            <p>“당신의 침실에 영감을 더할 <br>
+              크라운구스만의 시그니처 무드."</p>
+            <p class="life_txt1">“The elegance of sleep, <br>
+              captured in every detail. <br>
+              This is the world of <br>
+              Crown Goose."</p>
+            <a href="#" class="view-more">View More</a>
+          </div><!-- sec_txt -->
+          <img src="./img/product/hotelcollection/hotelcollection-3.png" alt="호텔컬렉션">
+        </div><!-- second_sub -->
+        <div class="third_sub">
+          <img src="./img/product/hotelcollection/hotelcollection-4.png" alt="호텔컬렉션">
+        </div><!-- third_sub -->
+      </div><!-- hotel -->
+      <span class="line2"></span>
+      <div id="cover" data-aos="fade-down" data-aos-duration="2500">
+        <p class="product_txt">Goose & Cover Collection</p>
+        <p class="product_txt1">럭셔리한 편안함과 세련된 스타일의 완벽한 조화.</p>
+        <p class="product_txt2">
+          Crafted to elevate your living space with timeless <br>
+          elegance and refined style.
+        </p>
+
+        <!-- cover -->
+        <div class="cover_list">
+          <!-- 아이템 1 -->
+          <div class="cover_item">
+            <img src="./img/product/cover/coverset.png" alt="커버세트">
+            <div class="item_text">
+              <p class="item_title">Cover Collection</p>
+              <p class="item_desc">고급 소재와 섬세한 디테일로 완성된 디자인은 침실을 예술적인 공간으로 바꿔줍니다.</p>
+              <hr>
+              <p class="item_price">530,000원</p>
+              <hr>
+            </div><!--item_text  -->
+          </div><!-- cover_item -->
+          <!-- 아이템 2 -->
+          <div class="cover_item">
+            <img src="./img/product/cover/topper.png" alt="토퍼">
+            <div class="item_text">
+              <p class="item_title">Goose Topper</p>
+              <p class="item_desc">프리미엄 구스 다운의 뛰어난 보온성과 부드러움을 선사하는 크라운 토퍼는 최상의 편안함을 전달합니다.</p>
+              <hr>
+              <p class="item_price">300,000원</p>
+              <hr>
+            </div><!-- item_text -->
+          </div><!--cover_item  -->
+          <!-- 아이템 3 -->
+          <div class="cover_item">
+            <img src="./img/product/cover/pillow.png" alt="베개">
+            <div class="item_text">
+              <p class="item_title">Goose Pillow</p>
+              <p class="item_desc">구스의 폭신하면서도 탄력 있는 편안함이 최적의 지지력으로 깊고 안정적인 숙면을 도와줍니다.</p>
+              <hr>
+              <p class="item_price">100,000원</p>
+              <hr>
+            </div><!--item_text  -->
+          </div><!--cover_item -->
+        </div><!-- cover_list -->
+      </div><!-- cover -->
+
+      <!-- 룩북 -->
+      <div id="lookbook">
+        <div class="product_txt1-1">The Archive</div>
+        <div class="product_txt_t" data-aos="fade-in" data-aos-duration="2500">LOOKBOOK</div>
+        <div class="line5"></div>
+        <p class="product_txt2-1">시간을 품은, 헤리티지 베딩 컬렉션</p>
+        <p class="product_txt2-2">our heritage collection reflects a journey of dedication to <br>
+          quality and timeless beauty.</p>
+        <div class="book" data-aos="fade-down" data-aos-duration="2500"><img src="./img/product/lookbook/lookbook.png"
+            alt="룩북"></div>
+        <a href="#" class="cilck-view">CLICK VIEW</a>
+      </div><!-- lookbook -->
+
+
+      <!--top 및 사이드메뉴 -->
+      <div id="tab_menu">
+        <ul>
+          <li><a href="#">REVIEW</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Q&amp;A</a></li>
+        </ul>
+      </div><!-- tab_menu -->
+      <div id="sidebtn">
+        <a href="#" class="sidebtn_1"><img src="./img/icons/side/email.png" alt="email" width="40"></a>
+        <a href="#" class="sidebtn_2"><img src="./img/icons/side/recommend.png" alt="recommaend" width="40"></a>
+        <a href="#" class="sidebtn_3"><img src="./img/icons/side/inquire.png" alt="inquire" width="40"></a>
+        <a href="#" class="top_btn"><img src="./img/icons/top.png" alt="위로가기" width="40"></a>
+      </div><!-- sidebtn-->
+    </div><!-- container -->
+
+    <!-- footer -->
+    <footer data-aos="fade-up" data-aos-duration="2500">
+      <div id="foot-bg">
+        <img src="./img/footer/footerbg.png" alt="bg">
+      </div>
+      <div id="foot_top">
+        <div class="foot_t">
+          <p>WE'RE <br>OFFERING A <br>NEW SERVICE</p>
+        </div>
+        <div id="sns">
+          <a href="#"><img src="./img/icons/sns/facebook.png" alt="facebook" class="facebook-icon"></a>
+          <a href="#"><img src="./img/icons/sns/instagram.png" alt="instagram"></a>
+          <a href="#"><img src="./img/icons/sns/kakaostory.png" alt="kakaostory"></a>
+          <a href="#"><img src="./img/icons/sns/youtube.png" alt="youtube" class="youtube-icon"></a>
+          <a href="#"><img src="./img/icons/sns/blog.png" alt="blog" class="blog-icon"></a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <ul>
+          <li>태그 | 가이드 | 이용약관</li>
+          <li>개인정보취급방침 | 사업자 정보 확인</li>
+        </ul>
+        <div class="footer-info">
+          <p>(주)지에이치씨지<br>통신판매번호: 2015-서울 강남-02167호</p>
+          <p>서울 강남구 도산 대로 78길 40(청담동 13-26)<br>
+            E-MAIL crowngoose@crowngooseemail.com</p>
+          <p>운영시간 AM9:00~ PM6:00 <br>
+            고객지원 02-575-6525</p>
+          <p>청담 부티크 매장 :<br>
+            서울시 강남구 도산 대로 78길 40(청담동 13-26)<br>
+            CROWN GOOSE HOUSE DOSAN, 02- 6101-7755</p>
+          <p>CEO : 이재성 l CPO : 이재성</p>
+        </div>
+        <div class="copyright">&copy; Copyright GHCG <br>All rights reserved.</div>
+        <a href="index.html"><img src="./img/footer/footerlogo.png" alt="logo" width="180" class="f_logo"></a>
+        <p class="letter">CROWN GOOSE</p>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- 메인슬라이드 스크립트 -->
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    $(function () {
+      const $slides = $('#mainslide .mainset > li');
+      const $dots = $('#btn_all .dot');
+      const total = $slides.length;
+      let current = 0;
+      let intervalId;
+
+      function goToSlide(index) {
+        if (index === current) return;
+
+        const $currentSlide = $slides.eq(current);
+        const $nextSlide = $slides.eq(index);
+
+        $nextSlide.css({ left: '100%' }).addClass('active');
+        $currentSlide.animate({ left: '-100%' }, 600, function () {
+          $(this).removeClass('active').css('left', '100%');
+        });
+        $nextSlide.animate({ left: '0' }, 600);
+
+        $dots.removeClass('on');
+        $dots.eq(index).addClass('on');
+
+        current = index;
+      }
+
+      function autoSlide() {
+        intervalId = setInterval(() => {
+          goToSlide((current + 1) % total);
+        }, 3000);
+      }
+
+      function stopAutoSlide() {
+        clearInterval(intervalId);
+      }
+
+      $dots.on('click', function () {
+        const index = $(this).index();
+        stopAutoSlide();
+        goToSlide(index);
+        autoSlide();
+      });
+
+      $('.prev').on('click', function (e) {
+        e.preventDefault();
+        stopAutoSlide();
+        goToSlide((current - 1 + total) % total);
+        autoSlide();
+      });
+
+      $('.next').on('click', function (e) {
+        e.preventDefault();
+        stopAutoSlide();
+        goToSlide((current + 1) % total);
+        autoSlide();
+      });
+
+      // 모바일 터치 스와이프
+      let startX = 0;
+      let endX = 0;
+
+      $('#mainslide').on('touchstart', function (e) {
+        startX = e.originalEvent.touches[0].clientX;
+      });
+
+      $('#mainslide').on('touchmove', function (e) {
+        endX = e.originalEvent.touches[0].clientX;
+      });
+
+      $('#mainslide').on('touchend', function () {
+        const diffX = endX - startX;
+        if (Math.abs(diffX) > 50) {
+          stopAutoSlide();
+          if (diffX > 0) {
+            goToSlide((current - 1 + total) % total);
+          } else {
+            goToSlide((current + 1) % total);
+          }
+          autoSlide();
+        }
+      });
+
+      // 초기 상태 설정
+      $slides.css('left', '100%').removeClass('active');
+      $slides.eq(current).css('left', '0').addClass('active');
+      $dots.eq(current).addClass('on');
+
+      autoSlide();
+    });
+  </script>
+
+
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      loop: true,
+      effect: 'fade', // 
+      fadeEffect: {
+        crossFade: true
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.next',
+        prevEl: '.prev',
+      },
+    });
+  </script>
+
+</body>
+</html>

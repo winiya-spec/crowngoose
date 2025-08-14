@@ -1,0 +1,290 @@
+@charset "utf-8";
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  color: #37250f;
+  line-height: 1.5em;
+  font-size: 14px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+/* 전체 랩 */
+#wrap1 {
+  width: 100%;
+  max-width: 600px;
+  min-width: 320px;
+}
+
+#inner_wrap {
+  margin: 0 auto;
+}
+
+
+/* 헤더 영역 */
+#log_top {
+  text-align: center;
+  margin: 30px 0;
+  margin-top: 100px;
+}
+
+#log_top h1 {
+  font-family: 'NotoSerifDisplay-Regular';
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.line {
+  display: inline-block;
+  width: 70%;
+  height: 1px;
+  background-color: #000;
+  margin-bottom: 5px;
+}
+
+.txt_1 {
+  font-size: 24px;
+  letter-spacing: 0.06em;
+  margin: 10px 0 8px;
+}
+
+.txt_2 {
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  margin-bottom: 80px;
+}
+
+/* 서브 링크 */
+
+#inner_wrap {
+  width: 100%;
+  max-width: 380px;
+}
+
+.sub {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto 20px;
+}
+
+.sub a {
+  font-size: 14px;
+  color: #3c2a1e;
+  margin: 0px auto;
+}
+
+.sub a:hover {
+  text-decoration: underline;
+}
+
+/* 폼 */
+#inner_wrap form {
+  text-align: center;
+
+}
+
+#inner_wrap form input[type="text"],
+#inner_wrap form input[type="password"] {
+  width: 100%;
+  max-width: 380px;
+  height: 60px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+
+/* 로그인 상태 유지 */
+#log_btn {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto 10px;
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+#log_btn label {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 비밀번호 찾기 */
+#pwd {
+  text-align: left;
+  max-width: 380px;
+  margin: 0 auto 20px;
+}
+
+#pwd a {
+  font-size: 14px;
+  color: #333;
+}
+
+#pwd a:hover {
+  text-decoration: underline;
+}
+
+/* 공통 버튼 스타일 */
+.btn-bg {
+  width: 100%;
+  max-width: 380px;
+  height: 60px;
+  border: none;
+  background: url('../img/login/bg-bar1.png') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 60px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* SNS + 회원가입 버튼 그룹 */
+.btn-group {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+/* SNS 버튼 */
+#sns_btn {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#sns_btn button {
+  flex: 1;
+  height: 60px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+
+/* 회원가입 버튼 */
+#user {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-secondary {
+  width: 100%;
+  max-width: 380px;
+  height: 60px;
+  background: url('../img/login/bg-bar1.png') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  line-height: 60px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+/* 탑버튼/사이드버튼 */
+
+
+.top_btn {
+  position: fixed;
+  right: 5px;
+  bottom: 50px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
+  filter: brightness(1);
+}
+
+.top_btn:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+.sidebtn_1,
+.sidebtn_2,
+.sidebtn_3 {
+  position: fixed;
+  right: 5px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
+  filter: brightness(1);
+  cursor: pointer;
+}
+
+.sidebtn_1:hover,
+.sidebtn_2:hover,
+.sidebtn_3:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+
+#sidebtn a img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 1.5px;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transform: scale(0.8);
+
+}
+
+#sidebtn a:hover img {
+  transform: scale(0.9);
+
+  filter: brightness(1.1);
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
+}
+
+
+
+.sidebtn_1 {
+  bottom: 200px;
+  transition: all 0.3s;
+}
+
+.sidebtn_2 {
+  bottom: 240px;
+  transition: all 0.3s;
+}
+
+.sidebtn_3 {
+  bottom: 280px;
+  transition: all 0.3s;
+}
+
+.top_btn,
+.sidebtn_1,
+.sidebtn_2,
+.sidebtn_3 {
+  z-index: 1000;
+}

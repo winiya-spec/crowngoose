@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>마이페이지</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/font.css" />
+  <link rel="stylesheet" href="css/top.css" />
+  <link rel="stylesheet" href="css/bottom.css" />
+  <link rel="stylesheet" href="css/layout4.css" />
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="js/menu.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    #mypage_content {
+  max-width: 600px;
+  margin: 60px auto 100px auto;
+  padding: 50px 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  color: #2c2c2c;
+  font-family: 'Pretendard-Regular', sans-serif;
+}
+
+#mypage_content h2 {
+  font-family: 'NotoSerifDisplay-Regular', serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 25px;
+  color: #2c2519;
+  letter-spacing: 0.03em;
+}
+
+#mypage_content p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #555555;
+  line-height: 1.5;
+  font-family: 'Pretendard-Regular', sans-serif;
+}
+
+#logoutBtn {
+  background: linear-gradient(135deg, #9b7448, #66452a);
+  border: none;
+  color: #ffeece;
+  padding: 10px 40px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(163, 115, 59, 0.5);
+  transition: 
+    background 0.4s ease,
+    box-shadow 0.4s ease,
+    color 0.4s ease,
+    transform 0.3s ease;
+  font-family: 'Pretendard-Regular', sans-serif;
+  position: relative;
+  overflow: hidden;
+ 
+}
+
+#logoutBtn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(197, 197, 197, 0.25), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  border-radius: 8px;
+  transform: rotate(25deg);
+  z-index: 1;
+}
+
+#logoutBtn:hover {
+  background: linear-gradient(135deg, #a3733b, #917753);
+  color: #ffeece;
+  transform: translateY(-3px);
+}
+
+#logoutBtn:hover::before {
+  opacity: 1;
+  animation: shine 1.2s ease forwards;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(25deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+
+
+.my_img {
+  width: 100%;
+  max-width: 90%;
+  margin: 10px auto 0;
+  overflow: hidden;
+  
+  box-shadow: 0 10px 20px rgba(161, 121, 59, 0.35);
+}
+.my_img img {
+  width: 100%;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.my_img:hover img {
+  transform: scale(1.02);
+}
+
+
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header id="top">
+      <img src="./img/header/hdbg.png" alt="헤드배경" class="hd_bg" />
+      <div class="top-inner">
+        <h1 class="hd_logo">
+          <a href="index.html"><img src="./img/header/hd-logo.png" alt="crowngoose" /></a>
+        </h1>
+        <ul class="top_icon">
+          <li><a href="#" class="menu_icon"><img src="./img/icons/header_icon/shopping.png" alt="쇼핑" width="28" /></a></li>
+          <li><a href="login.html" class="menu_icon"><img src="./img/icons/header_icon/login.png" alt="로그인" width="31" /></a></li>
+          <li><a href="#" class="menu_icon"><img src="./img/icons/header_icon/search.png" alt="검색" width="33" /></a></li>
+          <li><a href="#" class="menu_con"><img src="./img/icons/header_icon/menu.png" alt="메뉴" width="25" /></a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div id="menu_wrap">
+      <div class="menu_wrap_inner">
+        <button type="button" class="menu_close">
+          <img src="./img/icons/close.png" alt="close" width="45">
+        </button>
+        <nav id="gnb">
+          <!-- <img src="./img/icons/navi_bg.png" alt="헤드배경" class="navi_bg"> -->
+          <div id="navi_btn">
+            <a href="login.html">LOGIN</a>
+            <a href="join.html">JOIN US</a>
+          </div>
+          <div id="search">
+            <form action="/search" method="get" class="search-form">
+              <input type="text" name="search" class="bar">
+              <span class="search-icon"></span>
+            </form>
+          </div>
+          <ul>
+            <li class="has-submenu">
+              <a href="brand.html">
+                <span class="menu-text">CROWN STORY</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="brand.html" class="selected connect">브랜드헤리티지</a></li>
+                <li><a href="#">글로벌 크라운구스</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">
+                <span class="menu-text">ART COLLABORATION</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">크리에이터 협업스토리</a></li>
+                <li><a href="#">크라운구스 아뜰리에</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="product.html">
+                <span class="menu-text">PRODUCT</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="product.html" class="connect">크라운컬렉션</a></li>
+                <li><a href="#">마제스티컬렉션 </a></li>
+                <li><a href="#">커버컬렉션</a></li>
+                <li><a href="#">구스컬렉션</a></li>
+                <li><a href="#">호텔 컬렉션</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">
+                <span class="menu-text">BESPOKE</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">비스포크 침구상담</a></li>
+                <li><a href="#">파트너십</a></li>
+                <li><a href="#">컨설팅 예약</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">
+                <span class="menu-text">MEDIA</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">뉴스&보도자료</a></li>
+                <li><a href="#">인플루언서리뷰</a></li>
+                <li><a href="#">전시/이벤트 스토리</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">
+                <span class="menu-text">COMMUNITY</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">자주묻는 질문</a></li>
+                <li><a href="#">고객후기</a></li>
+                <li><a href="#">온라인 문의</a></li>
+              </ul>
+            </li>
+          </ul>
+
+
+
+
+
+
+          <div id="navi_info">
+            <p>CS CENTER</p>
+            <p>02-575-6525</p>
+          </div>
+          <div id="kakao">
+            <a href="#"><img src="./img/icons/kakao1.png" alt="feedback" width="30" class="talk">카카오톡 상담</a>
+          </div>
+          <div id="sns1">
+            <a href="#"><img src="./img/icons/sns/facebook.png" alt="facebook" class="facebook-icon"></a>
+            <a href="#"><img src="./img/icons/sns/instagram.png" alt="instagram"></a>
+            <a href="#"><img src="./img/icons/sns/kakaostory.png" alt="kakaostory"></a>
+            <a href="#"><img src="./img/icons/sns/youtube.png" alt="youtube" class="youtube-icon"></a>
+            <a href="#"><img src="./img/icons/sns/blog.png" alt="blog" class="blog-icon"></a>
+          </div>
+          <div id="navi_logo">
+            <a href="index.html"><img src="./img/footer/footerlogo.png" alt="logo" class="m_logo"></a>
+          </div>
+        </nav><!-- gnb -->
+      </div><!-- menu_wrap_inner-->
+    </div><!-- menu_wrap -->
+
+
+<div class="my_img" data-aos="zoom-" data-aos-delay="300" data-aos-duration="1000">
+  <img src="./img/login/mypage_img.png" alt="mypage 이미지" />
+</div>
+
+
+    <main id="mypage_content" role="main" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
+      <h2>Welcome!, <span id="username"></span>님!</h2>
+      <p>여기는 마이페이지입니다.</p>
+      <button id="logoutBtn">로그아웃</button>
+    </main>
+
+    <footer data-aos="fade-up" data-aos-duration="2500">
+      <div id="foot-bg">
+        <img src="./img/footer/footerbg.png" alt="bg" />
+      </div>
+      <div id="foot_top">
+        <div class="f_txt">
+          <p>WE'RE <br />OFFERING A <br />NEW SERVICE</p>
+        </div>
+        <div id="sns">
+          <a href="#"><img src="./img/icons/sns/facebook.png" alt="facebook" class="facebook-icon" /></a>
+          <a href="#"><img src="./img/icons/sns/instagram.png" alt="instagram" /></a>
+          <a href="#"><img src="./img/icons/sns/kakaostory.png" alt="kakaostory" /></a>
+          <a href="#"><img src="./img/icons/sns/youtube.png" alt="youtube" class="youtube-icon" /></a>
+          <a href="#"><img src="./img/icons/sns/blog.png" alt="blog" class="blog-icon" /></a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <ul>
+          <li>태그 | 가이드 | 이용약관</li>
+          <li>개인정보취급방침 | 사업자 정보 확인</li>
+        </ul>
+        <div class="footer-info">
+          <p>(주)지에이치씨지<br />통신판매번호: 2015-서울 강남-02167호</p>
+          <p>
+            서울 강남구 도산 대로 78길 40(청담동 13-26)<br />
+            E-MAIL crowngoose@crowngooseemail.com
+          </p>
+          <p>
+            운영시간 AM9:00~ PM6:00 <br />
+            고객지원 02-575-6525
+          </p>
+          <p>
+            청담 부티크 매장 :<br />
+            서울시 강남구 도산 대로 78길 40(청담동 13-26)<br />
+            CROWN GOOSE HOUSE DOSAN, 02- 6101-7755
+          </p>
+          <p>CEO : 이재성 l CPO : 이재성</p>
+        </div>
+        <div class="copyright">&copy; Copyright GHCG <br />All rights reserved.</div>
+        <a href="index.html"><img src="./img/footer/footerlogo.png" alt="logo" width="180" class="f_logo" /></a>
+        <p class="letter">CROWN GOOSE</p>
+      </div>
+    </footer>
+
+    <!-- 탑 및 사이드 버튼-->
+    <div id="sidebtn">
+      <a href="#" class="sidebtn_1"><img src="./img/icons/side/email.png" alt="email" width="40" /></a>
+      <a href="#" class="sidebtn_2"><img src="./img/icons/side/recommend.png" alt="recommaend" width="40" /></a>
+      <a href="#" class="sidebtn_3"><img src="./img/icons/side/inquire.png" alt="inquire" width="40" /></a>
+      <a href="#" class="top_btn"><img src="./img/icons/top.png" alt="위로가기" width="40" /></a>
+    </div>
+  </div>
+
+  <script>
+    // 로그인 여부 확인 및 이름 표시
+    $(function () {
+      const username = sessionStorage.getItem("name");
+      if (!username) {
+        alert("로그인이 필요합니다.");
+        window.location.href = "login.html";
+        return;
+      }
+      $("#username").text(username);
+
+      // 로그아웃 처리
+      $("#logoutBtn").click(function () {
+        sessionStorage.clear();
+        alert("로그아웃 되었습니다.");
+        window.location.href = "login.html";
+      });
+    });
+  </script>
+
+
+
+<script>
+  AOS.init({
+    duration: 1000, 
+    easing: 'ease-in-out',
+    once: true,     
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crown Goose Heritage</title>
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/layout2.css">
+  <link rel="stylesheet" href="css/top.css">
+  <link rel="stylesheet" href="css/bottom.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/script2.js"></script>
+
+  <!-- AOS 스타일 -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <!-- AOS 스크립트 -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="top">
+      <img src="./img/header/hdbg.png" alt="헤드배경" class="hd_bg">
+      <div class="top-inner">
+        <h1 class="hd_logo">
+          <a href="index.html">
+            <img src="./img/header/hd-logo.png" alt="crowngoose">
+          </a>
+        </h1>
+        <ul class="top_icon">
+          <li><a href="#" class="menu_icon"><img src="./img/icons/header_icon/shopping.png" alt="쇼핑" width="28"></a>
+          </li>
+          <li><a href="login.html" class="menu_icon"><img src="./img/icons/header_icon/login.png" alt="로그인"
+                width="31"></a></li>
+          <li><a href="#" class="menu_icon"><img src="./img/icons/header_icon/search.png" alt="검색" width="33"></a></li>
+          <li><a href="#" class="menu_con"><img src="./img/icons/header_icon/menu.png" alt="메뉴" width="25"></a></li>
+        </ul>
+      </div><!-- top-inner -->
+    </header>
+
+    <div id="menu_wrap">
+      <div class="menu_wrap_inner">
+        <button type="button" class="menu_close">
+          <img src="./img/icons/close.png" alt="close" width="45">
+        </button>
+        <nav id="gnb">
+          <!-- <img src="./img/icons/navi_bg.png" alt="헤드배경" class="navi_bg"> -->
+          <div id="navi_btn">
+            <a href="login.html">LOGIN</a>
+            <a href="join.html">JOIN US</a>
+          </div>
+          <div id="search">
+            <form action="/search" method="get" class="search-form">
+              <input type="text" name="search" class="bar">
+              <span class="search-icon"></span>
+            </form>
+          </div>
+          <ul>
+            <li class="has-submenu">
+              <a href="brand.html">
+                <span class="menu-text">CROWN STORY</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="brand.html" class="selected connect">브랜드헤리티지</a></li>
+                <li><a href="#">글로벌 크라운구스</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">
+                <span class="menu-text">ART COLLABORATION</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">크리에이터 협업스토리</a></li>
+                <li><a href="#">크라운구스 아뜰리에</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="product.html">
+                <span class="menu-text">PRODUCT</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="product.html" class="connect">크라운컬렉션</a></li>
+                <li><a href="#">마제스티컬렉션 </a></li>
+                <li><a href="#">커버컬렉션</a></li>
+                <li><a href="#">구스컬렉션</a></li>
+                <li><a href="#">호텔 컬렉션</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">
+                <span class="menu-text">BESPOKE</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">비스포크 침구상담</a></li>
+                <li><a href="#">파트너십</a></li>
+                <li><a href="#">컨설팅 예약</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">
+                <span class="menu-text">MEDIA</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">뉴스&보도자료</a></li>
+                <li><a href="#">인플루언서리뷰</a></li>
+                <li><a href="#">전시/이벤트 스토리</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">
+                <span class="menu-text">COMMUNITY</span>
+                <span class="b_arrow"><img src="./img/icons/b_arrow.png" alt="arrow"></span>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">자주묻는 질문</a></li>
+                <li><a href="#">고객후기</a></li>
+                <li><a href="#">온라인 문의</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div id="navi_info">
+            <p>CS CENTER</p>
+            <p>02-575-6525</p>
+          </div>
+          <div id="kakao">
+            <a href="#"><img src="./img/icons/kakao1.png" alt="feedback" width="30" class="talk">카카오톡 상담</a>
+          </div>
+          <div id="sns1">
+            <a href="#"><img src="./img/icons/sns/facebook.png" alt="facebook" class="facebook-icon"></a>
+            <a href="#"><img src="./img/icons/sns/instagram.png" alt="instagram"></a>
+            <a href="#"><img src="./img/icons/sns/kakaostory.png" alt="kakaostory"></a>
+            <a href="#"><img src="./img/icons/sns/youtube.png" alt="youtube" class="youtube-icon"></a>
+            <a href="#"><img src="./img/icons/sns/blog.png" alt="blog" class="blog-icon"></a>
+          </div>
+          <div id="navi_logo">
+            <a href="index.html"><img src="./img/footer/footerlogo.png" alt="logo" class="m_logo"></a>
+          </div>
+        </nav><!-- gnb -->
+      </div><!-- menu_wrap_inner-->
+    </div><!-- menu_wrap -->
+
+
+    <!-- 메인 -->
+    <div>
+      <div id="main_wrap">
+        <p class="section-title" data-aos="fade-light" data-aos-duration="2000">BRAND<br>STORY</p>
+        <p class="brand-desc">
+          A legacy born from nobility, refined through time.<br>
+          Crown Goose began with a single belief — that sleep deserves art.<br>
+          What started with heritage now defines modern prestige.
+        </p>
+        <div id="mainslide">
+          <img src="./img/brandstory/brandmain.png" alt="메인 슬라이드" class="selected1">
+          <img src="./img/brandstory/brandmain2.png" alt="mainimg">
+          <img src="./img/brandstory/brandmain3.png" alt="mainimg">
+        </div>
+        <p><a href="index.html" class="site-link">www.crowngoose.com</a></p>
+      </div><!-- mainslide -->
+      <div id="container">
+        <div class="intro">
+          <!-- <div id="intro_bg"><img src="./img/brandstory/bg-2.png" alt="배경" calss="br_bg" ></div> -->
+          <div class="top">
+            <h2 class="time_txt" data-aos="fade-up" data-aos-duration="2000">시간의 기억, 영원한 가치</h2>
+            <h3 class="time_txt1">Crown Goose : Embracing Time<br> with Elegance</h3>
+          </div>
+          <div id="br_img">
+            <img src="./img/brandstory/heritage/heritagemain.png" alt="브랜드 메인 이미지" class="he_img">
+          </div>
+        </div><!--intro  -->
+
+        <!-- 헤리티지 -->
+        <div id="heritage_philosophy">
+          <h2 class="heri_txt">Heritage & Philosophy</h2>
+          <h3 class="heri_txt1">&nbsp;&nbsp;깊이 있는 역사와 품격을 담은 아카이브 베딩</h3>
+          <div id="story">
+            <div id="br_line"></div>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <div id="br_txt">
+              <div class="br_wrap active">
+                <p>크라운구스의 여정은, 잠이라는 가장 사적인 
+                  시간에 아름다움과 깊이를 더하고자 하는 조용한 열망에서 시작되었습니다.</p>
+                <p>저희는 ‘침구’를 단순한 생활용품이 아닌, 삶의 태도와 취향을 드러내는 섬세한 언어로 바라봅니다.</p>
+                <p class="quote">“Heritage is not simply preserved — it is lived.”</p>
+              </div>
+              <div class="br_wrap1">
+                <p>유산은 박제되는 것이 아니라, 매일의 시간 속에서 살아 숨 쉬는 것이라고 믿습니다.</p>
+                <p>오랜 전통 위에 현대적인 미감과 기능성을 더해 과거와 현재가 조화를 이루는 침구 문화를 완성해 갑니다.</p>
+                <p>소재 하나, 바느질 한 땀에도 깊은 사유와 정성을 담고 있습니다.</p>
+              </div>
+              <div class="br_wrap2">
+                <p>크라운이 중요하게 생각하는 것들은 하나의 철학으로향합니다.</p>
+                <p>무엇을 만드는지가 아닌, 어떻게 살아가는가에 대한 이야기.</p>
+                <p class="quote">“Philosophy is gently woven into every thread.”</p>
+              </div>
+              <div class="br_wrap3">
+                <p>우리가 만든 모든 것은, 결국 하루의 끝을 감싸는 따뜻한 철학이<br> 됩니다. 그리고 그 철학은, 가장 고요한 순간 속에서,<br> 당신의 삶에 은은한 깊이로 스며듭니다.</p>
+              </div>
+            </div><!--br_txt-->
+          </div><!--story-->
+        </div>
+        <!-- 헤리티지 스크립트 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script>
+          gsap.registerPlugin(ScrollTrigger);
+          const wraps = document.querySelectorAll('#br_txt > div');
+          const dots = document.querySelectorAll('#story .dot');
+          const heritage = document.getElementById('heritage_philosophy');
+          function activateSection(index) {
+            wraps.forEach((wrap, i) => {
+              wrap.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+              dot.classList.toggle('active', i === index);
+            });
+            heritage.style.backgroundColor = bgColors[index];
+          }
+          wraps.forEach((wrap, i) => {
+            ScrollTrigger.create({
+              trigger: wrap,
+              start: "top 80%",
+              end: "bottom 60%",
+              onEnter: () => activateSection(i),
+              onEnterBack: () => activateSection(i),
+            });
+          });
+        </script>
+
+        <!-- 철학 -->
+        <div id="philosophy">
+          <div id="story_main">
+            <img src="./img/brandstory/story/story-1.png" alt="철학 메인 이미지" data-aos="fade-up" data-aos-duration="2000">
+            <div id="sub_img">
+              <img src="./img/brandstory/story/story-2.png" alt="서브 이미지1" class="photo1">
+              <img src="./img/brandstory/story/story-3.png" alt="서브 이미지2" class="photo2">
+            </div>
+          </div>
+          <h2 class="heri_txt_3" data-aos="fade-up" data-aos-duration="2000">"A Journey in Prestige: <br>Crown Goose
+            Heritage"</h2>
+          <p class="heri_txt_4">&nbsp;&nbsp;깃털 하나에도 철학이 머무는 곳,<br>크라운구스의 이야기는 곧 품격의 역사입니다.</p>
+          <div class="phil_bg">
+            <img src="./img/brandstory/story/castlebg_1.png" alt="배경이미지">
+          </div>
+          <div id="ph_1">
+            <p class="num" data-aos="fade-down" data-aos-duration="2000">01</p>
+            <h2 class="s_sub" data-aos="fade-in" data-aos-duration="2500">THE BEGINNING</h2>
+            <p class="ph_sub">브랜드의 시작 - 유럽 귀족주의를 품은 수면의 시작점</p>
+            <p class="ph_sub1">
+              '왕실의 수면'이라는 개념 아래 구스다운의 예술성과 기능<br>
+              성을 동시에 완성하는 브랜드로 탄생했습니다.<br>
+              기품 있는 라이프스타일을 지향하며,전통의 가치를 모던<br>
+              하게 재해석한 크라운구스는 ‘고귀한 수면’이라는 새로운 <br>
+              문화를 창조합니다.
+            </p>
+            <div class="ph_img1">
+              <img src="./img/brandstory/story/story-4.png" alt="철학 이미지 1">
+            </div>
+          </div><!-- ph_1 -->
+          <div id="ph_2">
+            <p class="num" data-aos="fade-down" data-aos-duration="2000">02</p>
+            <h2 class="s_sub" data-aos="fade-in" data-aos-duration="2500">MODERN HERITAGE</h2>
+            <p class="ph_sub">예술과 침구의 만남 – 현대적으로 풀어낸 유산의 미학</p>
+            <p class="ph_sub1">
+              크라운구스는 단순한 제품을 넘어 예술적 오브제로서의 <br>
+              침구를 지향합니다. 각 컬렉션은 동시대 작가와의 콜라보<br>
+              레이션으로 기획되며,침구는 회화, 건축, 공간미학과의 유<br>
+              기적 조화 속에서 완성됩니다.
+            </p>
+            <div class="ph_img2">
+              <img src="./img/brandstory/story/story-5.png" alt="철학 이미지 2">
+            </div>
+          </div><!--ph_2  -->
+          <div id="ph_3">
+            <p class="num" data-aos="fade-down" data-aos-duration="2000">03</p>
+            <h2 class="s_sub" data-aos="fade-in" data-aos-duration="2500">CROWN ARCHIVE</h2>
+            <p class="ph_sub">시간의 가치를 담은 컬렉션</p>
+            <p class="ph_sub1">
+              크라운구스의 컬렉션은 시간이 흐를수록 더 가치가 쌓이<br>
+              는 수면 예술의 아카이브입니다. 각 컬렉션은 디자인, 소<br>
+              재, 원단, 테마를 기준으로 고유의 이야기를 담고 있으며<br>
+              예술 작품처럼 감상할 수 있는 고급 비주얼과 함께 전개<br>
+              됩니다.
+            </p>
+            <div class="ph_img3">
+              <img src="./img/brandstory/story/story-6.png" alt="철학 이미지 3">
+            </div>
+          </div><!-- ph_3 -->
+          <div id="ph_4">
+            <p class="num" data-aos="fade-down" data-aos-duration="2000">04</p>
+            <h2 class="s_sub" data-aos="fade-in" data-aos-duration="2500">ATELIER & CRAFT</h2>
+            <p class="ph_sub">장인의 손끝에서 태어나는 100가지 수공정</p>
+            <p class="ph_sub1">
+              모든 크라운구스 제품은 유럽형 아틀리에 시스템을 <br>
+              통해 수작업으로 제작됩니다.
+              재단, 봉제, 충전, 마감<br>
+              에 이르기까지 100가지 이상의 공정을 거치며
+              장인<br> 한 사람의 정성과 기술이 그대로 담겨 있습니다.<br>
+              사용되는 원단은 고밀도 100수 면, 벨기에 리넨, 독<br>
+              일산 지퍼 등
+              세계 최상급 자재를 선별하며, 마감디<br>테일까지 완벽을 추구합니다.
+              이것이 ‘수면이 곧 <br>예술’이 되는 크라운구스만의 방식입니다.
+            </p>
+            <div class="ph_img3">
+              <img src="./img/brandstory/story/story-7.png" alt="철학 이미지 3">
+            </div>
+          </div><!-- ph_4 -->
+          <div id="ph_5">
+            <p class="num" data-aos="fade-down" data-aos-duration="2000">05</p>
+            <h2 class="s_sub" data-aos="fade-in" data-aos-duration="2500">THE LEGACY</h2>
+            <p class="ph_sub">아이더구스부터 시작된, 유럽 정통 구스 헤리티지</p>
+            <p class="ph_sub1">
+              크라운구스는 세계 최고급 소재인 **아이더 구스<br>
+              (Eider Goose)**를 비롯한 유럽산 구스다운만을<br>
+              사용합니다.
+              노르웨이, 아이슬란드, 헝가리 등 자연<br>
+              생태계가 보호된 지역의 구스만을 엄선해
+              깃털의 <br>
+              윤기, 보온성, 복원력을 극대화한 프리미엄 침구를 <br>
+              만듭니다.
+              이는 유럽 왕실 침실의 기준을 그대로 계<br>
+              승하며,
+              모든 제품은 국제 인증을 거쳐 제작됩니다.
+            </p>
+            <div class="ph_img3">
+              <img src="./img/brandstory/story/story-8.png" alt="철학 이미지 3">
+            </div>
+          </div><!-- ph_5 -->
+        </div><!-- philosophy -->
+
+
+        <!-- 호텔크라운구스 -->
+        <div id="hotel_img">
+          <p class="glo_txt" data-aos="fade-up" data-aos-duration="2500">"Crown Goose Around <br>the World"</p>
+          <p class="glo_sub">From royal traditions to modern masterpieces,<br>
+            Crown Goose brings timeless Korean elegance to the world.<br>
+            A global symbol of prestige, artistry, and sleep perfected.</p>
+          <p class="glo_sub1">서울에서 런던, 두바이에서 뉴욕까지.<br>
+            크라운구스는 세계 각지의 하이엔드 고객과 함께하며
+            글로벌 럭셔리<br> 라이프스타일의 새로운 기준을 만들어갑니다.</p>
+          <img src="./img/brandstory/hotelcollection/hotelcollection.png" alt="호텔 컬렉션 이미지">
+          <p class="hotel-caption">
+            A legacy born from nobility, refined through time.<br>
+            Crown Goose began with a single belief — that sleep deserves art.<br>
+            What started with heritage now defines modern prestige.
+          </p>
+        </div><!-- hotel_img  -->
+        <!-- 동영상 -->
+        <div id="video">
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/iqze94GywWA?autoplay=1&mute=1&controls=0&loop=1&playlist=iqze94GywWA&playsinline=1&modestbranding=1"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div><!--video-wrap -->
+          <div id="sub_menu">
+            <p data-aos="fade-down" data-aos-duration="2000"><strong>Crown Goose Around the World</strong><br>글로벌 크라운구스
+            </p>
+            <p data-aos="fade-left" data-aos-duration="2000"><strong>크리에이터와의 협업 스토리</strong><br>Collaborations &
+              Creators
+            </p>
+            <p data-aos="fade-up" data-aos-duration="2000"><strong>크라운구스 아뜰리에</strong><br>Inside the Atelier</p>
+          </div><!-- sub_menu -->
+          <div id="sidebtn">
+            <a href="#" class="sidebtn_1"><img src="./img/icons/side/email.png" alt="email" width="40"></a>
+            <a href="#" class="sidebtn_2"><img src="./img/icons/side/recommend.png" alt="recommend" width="40"></a>
+            <a href="#" class="sidebtn_3"><img src="./img/icons/side/inquire.png" alt="inquire" width="40"></a>
+            <a href="#" class="top_btn"><img src="./img/icons/top.png" alt="위로가기" width="40"></a>
+          </div><!-- sidebtn -->
+        </div><!-- sub_menu-->
+      </div><!-- video -->
+    </div><!-- container -->
+
+
+    <!-- footer -->
+    <footer data-aos="fade-up" data-aos-duration="2500">
+       <div id="foot-bg">
+        <img src="./img/footer/footerbg.png" alt="bg">
+      </div>
+      <div id="foot_top">
+        <div class="foot_t">
+          <p>WE'RE <br>OFFERING A <br>NEW SERVICE</p>
+        </div>
+        <div id="sns">
+          <a href="#"><img src="./img/icons/sns/facebook.png" alt="facebook" class="facebook-icon"></a>
+          <a href="#"><img src="./img/icons/sns/instagram.png" alt="instagram"></a>
+          <a href="#"><img src="./img/icons/sns/kakaostory.png" alt="kakaostory"></a>
+          <a href="#"><img src="./img/icons/sns/youtube.png" alt="youtube" class="youtube-icon"></a>
+          <a href="#"><img src="./img/icons/sns/blog.png" alt="blog" class="blog-icon"></a>
+        </div>
+      </div>
+      <div class="footer-content">
+        <ul>
+          <li>태그 | 가이드 | 이용약관</li>
+          <li>개인정보취급방침 | 사업자 정보 확인</li>
+        </ul>
+        <div class="footer-info">
+          <p>(주)지에이치씨지<br>통신판매번호: 2015-서울 강남-02167호</p>
+          <p>서울 강남구 도산 대로 78길 40(청담동 13-26)<br>
+            E-MAIL crowngoose@crowngooseemail.com</p>
+          <p>운영시간 AM9:00~ PM6:00 <br>
+            고객지원 02-575-6525</p>
+          <p>청담 부티크 매장 :<br>
+            서울시 강남구 도산 대로 78길 40(청담동 13-26)<br>
+            CROWN GOOSE HOUSE DOSAN, 02- 6101-7755</p>
+          <p>CEO : 이재성 l CPO : 이재성</p>
+        </div>
+        <div class="copyright">&copy; Copyright GHCG <br>All rights reserved.</div>
+        <a href="index.html"><img src="./img/footer/footerlogo.png" alt="logo" width="180" class="f_logo"></a>
+        <p class="letter">CROWN GOOSE</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
